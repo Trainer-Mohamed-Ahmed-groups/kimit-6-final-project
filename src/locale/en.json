@@ -1,5 +1,10 @@
 {
     "welcome": "Welcome to React and react-i18next",
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "products": "Products",
+    "view_product_details": "View product details",
+    "brand_name": "Brand name",
+    "price": "Price",
+    "categories" :"Categories"
 }

@@ -20,7 +20,7 @@ i18n
         translation: ArabicTranslation
       }
     },
-    lng: "ar",
+    lng: "en",
     fallbackLng: "en",
     interpolation: {
       escapeValue: false

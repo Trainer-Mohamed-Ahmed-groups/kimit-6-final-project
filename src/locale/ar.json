@@ -1,5 +1,10 @@
 {
     "welcome": "مرحبا فى الرياكت",
-    "home":"الرئيسية",
-    "about":"عنا"
+    "home": "الرئيسية",
+    "about": "عنا",
+    "products": "المنتجات",
+    "view_product_details": "رؤية المزيد",
+    "brand_name": "اسم الماركة",
+    "price": "السعر",
+    "categories":"الأصناف"
 }
