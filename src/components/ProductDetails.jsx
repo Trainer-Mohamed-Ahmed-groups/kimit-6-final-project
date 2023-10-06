@@ -11,7 +11,7 @@ export default function ProductDetails() {
     const { t } = useTranslation();
 
     let getProduct = () => {
-        fetch(`https://dummyjson.com/products/${params.productId}`)
+        fetch(`http://localhost:2222/products/${params.productId}`)
             .then(json => json.json())
             .then(res => setProduct(res))
     }
@@ -21,7 +21,7 @@ export default function ProductDetails() {
     }, [])
 
     return (
-        <div className="m-4 text-center text-secondary">
+        <div className="m-4 text-center">
             {product ?
                 <>
                     <h1 className="text-primary">{product.title}</h1>

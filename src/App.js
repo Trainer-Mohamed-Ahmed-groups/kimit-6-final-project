@@ -9,10 +9,14 @@ import ReduxExample from "./views/ReduxExample"
 import { useTranslation } from 'react-i18next';
 import Products from './views/Products';
 import ProductDetails from './components/ProductDetails';
+import { useContext } from 'react';
+import { ThemeContext } from "./context/ThemeContext"
 function App() {
   const { t, i18n } = useTranslation();
+  let theme = useContext(ThemeContext)
+  console.log(theme)
   return (
-    <div className={i18n.language === "ar" ? "rtl" : ""}>
+    <div className={`App ${i18n.language === "ar" ? "rtl" : ""} ${theme.theme}`}>
       <SiteNav />
 
       <Routes>

@@ -3,8 +3,12 @@
     "home": "الرئيسية",
     "about": "عنا",
     "products": "المنتجات",
+    "cart": "العربة",
     "view_product_details": "رؤية المزيد",
     "brand_name": "اسم الماركة",
     "price": "السعر",
-    "categories":"الأصناف"
+    "categories": "الأصناف",
+    "nOfProducts":"عدد المنتجات",
+    "add_in_cart":"أضف الى العربة"
+
 }

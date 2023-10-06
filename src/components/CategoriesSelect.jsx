@@ -8,7 +8,7 @@ export default function CategoriesSelect() {
     const [categories, setCategories] = useState([])
 
     let getCategories = () => {
-        fetch("https://dummyjson.com/products/categories")
+        fetch("http://localhost:2222/categories")
             .then(json => json.json())
             .then(res => setCategories(res))
     }
@@ -18,7 +18,7 @@ export default function CategoriesSelect() {
     }, [])
     return (
         <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">{t('categories')}</Dropdown.Toggle>
+            <Dropdown.Toggle variant="success" id="dropdown-basic" className="mb-4">{t('categories')}</Dropdown.Toggle>
 
             <Dropdown.Menu>
                 {
