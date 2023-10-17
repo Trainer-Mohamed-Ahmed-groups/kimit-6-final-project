@@ -14,6 +14,15 @@ export default function Products() {
             .then(res => setProducts(res))
     }
 
+    let filteredDataFn = (cat) => {
+        let filteredProducts = []
+        fetch("http://localhost:2222/products")
+            .then(json => json.json())
+            .then(res => filteredProducts = res)
+            .then(() => setProducts(filteredProducts.filter(product => product.category === cat)))
+    }
+    
+
     useEffect(() => {
         getProducts()
     }, [])
@@ -23,7 +32,7 @@ export default function Products() {
             <h1 className="m-4">{t('products')}</h1>
             <h2>{t('nOfProducts')} : {products.length}</h2>
             <Container fluid>
-                <CategoriesSelect />
+                <CategoriesSelect filteredDataFn={filteredDataFn} />
                 <Row>
                     {
                         products.length > 0

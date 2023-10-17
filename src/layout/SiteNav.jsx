@@ -28,7 +28,7 @@ function SiteNav() {
                     <Nav className="mx-auto">
                         <NavLink className="nav-link" to="/">{t('home')}</NavLink>
                         <NavLink className="nav-link" to="/about">{t('about')}</NavLink>
-                        <NavLink className="nav-link" to="/redux_example">{t('cart')}</NavLink>
+                        <NavLink className="nav-link" to="/cart">{t('cart')}</NavLink>
                         <NavLink className="nav-link" to="/products">{t('products')}</NavLink>
                         <FontAwesomeIcon
                             icon={faLanguage}

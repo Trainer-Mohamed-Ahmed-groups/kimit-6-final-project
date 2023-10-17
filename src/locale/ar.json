@@ -8,7 +8,8 @@
     "brand_name": "اسم الماركة",
     "price": "السعر",
     "categories": "الأصناف",
-    "nOfProducts":"عدد المنتجات",
-    "add_in_cart":"أضف الى العربة"
-
+    "nOfProducts": "عدد المنتجات",
+    "add_to_cart": "أضف الى العربة",
+    "remove": "احذف من العربة",
+    "added": "تمت الاضافة بنجاح"
 }

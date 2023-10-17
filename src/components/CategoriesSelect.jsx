@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "react-bootstrap";
-export default function CategoriesSelect() {
+export default function CategoriesSelect({ filteredDataFn }) {
     const { t } = useTranslation();
 
 
@@ -13,6 +13,8 @@ export default function CategoriesSelect() {
             .then(res => setCategories(res))
     }
 
+
+
     useEffect(() => {
         getCategories()
     }, [])
@@ -23,7 +25,7 @@ export default function CategoriesSelect() {
             <Dropdown.Menu>
                 {
                     categories.map(cat =>
-                        <Dropdown.Item href="#/action-1" key={Math.random()}>{cat}</Dropdown.Item>
+                        <Dropdown.Item key={Math.random()} onClick={() => filteredDataFn(cat)}>{cat}</Dropdown.Item>
                     )
                 }
             </Dropdown.Menu>

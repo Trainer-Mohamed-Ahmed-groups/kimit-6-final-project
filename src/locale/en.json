@@ -9,5 +9,7 @@
     "categories" :"Categories",
     "cart":"Cart",
     "nOfProducts":"Number of products",
-    "add_in_cart":"Add in cart"
+    "add_to_cart":"Add to cart",
+    "remove":"Remove from cart",
+    "added":"Added successfully"
 }

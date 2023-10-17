@@ -4,17 +4,17 @@ import SiteNav from './layout/SiteNav';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./views/Home"
 import About from "./views/About"
-import ReduxExample from "./views/ReduxExample"
+import Cart from "./views/Cart"
 // import i18 from 'i18next';
 import { useTranslation } from 'react-i18next';
 import Products from './views/Products';
 import ProductDetails from './components/ProductDetails';
 import { useContext } from 'react';
 import { ThemeContext } from "./context/ThemeContext"
+import ErrorPage from './views/ErrorPage';
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   let theme = useContext(ThemeContext)
-  console.log(theme)
   return (
     <div className={`App ${i18n.language === "ar" ? "rtl" : ""} ${theme.theme}`}>
       <SiteNav />
@@ -22,9 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/redux_example" element={<ReduxExample />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetails />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
